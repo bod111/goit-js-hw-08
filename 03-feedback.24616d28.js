@@ -6,4 +6,4 @@ var t=arguments[3],n="Expected a function",e=NaN,i="[object Symbol]",r=/^\s+|\s+
 },{}],"TTyb":[function(require,module,exports) {
 "use strict";var e=t(require("../services/localStorage"));function t(e){return e&&e.__esModule?e:{default:e}}const a=require("lodash.throttle"),n=document.querySelector(".feedback-form"),o="feedback-form-state";let l={};const r=e.default.get(o);console.log("parsedData",r),r&&(l=r,n.elements.email.value=r.email||"",n.elements.message.value=r.message||"");const s=t=>{const{name:a,value:n}=t.target;l={...l,[a]:n},e.default.save(o,l)};function c(t){t.preventDefault();const a=t.currentTarget,n=new FormData(a),r={},s=n.entries();for(const[e,o]of s){if(!o)return void console.log("Fill in all fields!");r[e]=o}r.canBeSpammed=!!n.get("canBeSpammed"),console.log(r),a.reset(),e.default.remove(o),l={}}n.addEventListener("input",a(s,500)),n.addEventListener("submit",c);
 },{"../services/localStorage":"kLNi","lodash.throttle":"FNyO"}]},{},["TTyb"], null)
-//# sourceMappingURL=/goit-js-hw-08.git/03-feedback.24616d28.js.map
+//# sourceMappingURL=/goit-js-hw-08/03-feedback.24616d28.js.map
