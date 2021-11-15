@@ -18,8 +18,8 @@ if (parsedData) {
   //   const input = form.elements[key];
   //   input.value = parsedData[key];
   // });
-  form.elements.email.value = parsedData.email ?? '';
-  form.elements.message.value = parsedData.message ?? '';
+  form.elements.email.value = parsedData.email || '';
+  form.elements.message.value = parsedData.message || '';
 }
 
 const inputHandler = e => {
